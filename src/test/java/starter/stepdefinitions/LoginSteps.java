@@ -38,13 +38,16 @@ public class LoginSteps {
 
     @When("Admin input invalid username")
     public void adminInputInvalidUsername() {
+        login.inputEmail("ekaamelia");
     }
 
     @And("Admin input valid password")
     public void adminInputValidPassword() {
+        login.inputPassword("ekaa1234");
     }
 
     @Then("Admin see error message {string}")
     public void adminSeeErrorMessage(String arg0) {
+        System.out.println("Wrong Email or Password");
     }
 }

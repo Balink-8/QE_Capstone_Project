@@ -1,5 +1,6 @@
 package starter.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -31,5 +32,20 @@ public class AkunSteps {
     @Then("Admin can view all account data")
     public void adminCanViewAllAccountData() {
         System.out.println("Admin melihat semua data akun");
+    }
+
+    @And("Admin on account page")
+    public void adminOnAccountPage() {
+        System.out.println("Admin on account page");
+    }
+
+    @And("Admin clicks the account details icon")
+    public void adminClicksTheAccountDetailsIcon() {
+        akun.clickDetailAccount();
+    }
+
+    @Then("Admin successfully view user account details")
+    public void adminSuccessfullyViewUserAccountDetails() {
+        System.out.println("Admin melihat detail akun");
     }
 }
