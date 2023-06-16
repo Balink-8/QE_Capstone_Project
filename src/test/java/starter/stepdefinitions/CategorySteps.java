@@ -1,5 +1,6 @@
 package starter.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,5 +30,40 @@ public class CategorySteps {
     @Then("admin see kategori details displayed")
     public void adminSeeKategoriDetailsDisplayed() {
         System.out.println("Anda melihat data kategori");
+    }
+
+    @And("admin click Tambah Kategori button menu")
+    public void adminClickTambahKategoriButtonMenu() {
+        category.clickAddCategory();
+    }
+
+    @And("admin input category name valid on the category name field")
+    public void adminInputCategoryNameValidOnTheCategoryNameField() {
+        category.inputCategoryName("Celana Chino");
+    }
+
+    @And("admin input category description valid on the category description field")
+    public void adminInputCategoryDescriptionValidOnTheCategoryDescriptionField() {
+        category.inputCategoryDescription("Tersedia size 27, 28, 29 dan 30, Tersedia warna hitam, coklat dan abu-abu");
+    }
+
+    @And("admin click simpan button")
+    public void adminClickSimpanButton() {
+        category.clickSimpanButton();
+    }
+
+    @And("admin click Edit Kategori button menu")
+    public void adminClickEditKategoriButtonMenu() {
+        category.clickEditButton();
+    }
+
+    @And("admin click Delete Kategori button menu")
+    public void adminClickDeleteKategoriButtonMenu() {
+        category.clickDeleteButton();
+    }
+
+    @Then("admin success delete category product")
+    public void adminSuccessDeleteCategoryProduct() {
+        System.out.println("Anda berhasil menghapus kategory");
     }
 }
