@@ -35,6 +35,9 @@ public class Profile extends PageObject {
     private By alamat(){
         return By.xpath("//label[text()='Alamat']/following-sibling::div/input");
     }
+    private By accountBankField(){
+        return By.xpath("//label[text()='Bank Central Asia (BCA)']/following-sibling::div/input");
+    }
     private By simpanButton() {
         return By.xpath("//p[text()='Simpan']");
     }
@@ -77,6 +80,10 @@ public class Profile extends PageObject {
     @Step
     public void inputAlamat(String alamat) {
         $(alamat()).type(alamat);
+    }
+    @Step
+    public void inputBankAccount(String bankAccount){
+        $(accountBankField()).type(bankAccount);
     }
     @Step
     public void clickSimpanButton() {

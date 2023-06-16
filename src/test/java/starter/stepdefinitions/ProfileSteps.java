@@ -87,4 +87,9 @@ public class ProfileSteps {
     public void adminInputAddressValidOnTheAddressField() {
         profile.inputAlamat("Kecamatan Kuta, Sebelah Selata Kota Denpasar, Bali");
     }
+
+    @And("admin input bank account number valid on the Bank account number field")
+    public void adminInputBankAccountNumberValidOnTheBankAccountNumberField() {
+        profile.inputBankAccount("3456 1234 6789");
+    }
 }
