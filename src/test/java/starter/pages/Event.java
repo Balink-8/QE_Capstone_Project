@@ -17,8 +17,8 @@ public class Event extends PageObject {
     private By googleMaps(){return By.id("linkGoogleEvent");}
     private By time(){return By.id("waktuEvent");}
     private By ticketMode(){return By.xpath("//button[@class='ant-switch css-12jzuas']");}
-    private By price(){return By.id("linkGoogleEvent");}
-    private By amount(){return By.id("waktuEvent");}
+    private By price(){return By.id("hargaEvent");}
+    private By amount(){return By.id("jumlahEvent");}
     private By save(){return By.xpath("//p[text()='Simpan']");}
     private By oneDataEditEvent(){return By.id("edit-icon");}
     private By changeTitle(){return By.id("judulEvent");}
@@ -26,7 +26,7 @@ public class Event extends PageObject {
     private By oneDataEvent(){return By.xpath("//td[text()='Tari Kecak']");}
     private By detailPage(){return By.xpath("//h1[text()='Detail Event']");}
     private By errorMsg(){return By.xpath("//h1[text()='Buat event baru']");}
-    private By uploadFoto(){return By.xpath("//label[@class='_buttonMain_9dkz3_30']");}
+    private By manageAddEvent(){return By.xpath("//a[text()='Event']");}
 
 
 
@@ -54,8 +54,7 @@ public class Event extends PageObject {
     @Step
     public void adminClickTheSelectPhotoButton(){
 
-        WebElement fileInput = getDriver().findElement(By.xpath("//label[@class='_buttonMain_9dkz3_30']"));
-//        $(uploadFoto()).click();
+        WebElement fileInput = getDriver().findElement(By.id("fotoEvent"));
         fileInput.sendKeys("C:\\Users\\Lenovo\\Downloads\\gambar.webp");
 
     }
@@ -93,6 +92,10 @@ public class Event extends PageObject {
     @Step
     public void adminClickTheSaveButton(){
         $(save()).click();
+    }
+    @Step
+    public void adminManagedToAddNewEventData(){
+        $(manageAddEvent()).shouldBeVisible();
     }
 
     //======TCEVENT03==========

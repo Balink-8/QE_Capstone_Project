@@ -108,9 +108,10 @@ public class EventSteps {
         event.adminClickTheSaveButton();
     }
 
-//    @Then("admin managed to add new event data")
-//    public void adminManagedToAddNewEventData() {
-//    }
+    @Then("admin managed to add new event data")
+    public void adminManagedToAddNewEventData() {
+        event.adminManagedToAddNewEventData();
+    }
 
     //======TCEVENT03==========
     @And("admin click one data event")
