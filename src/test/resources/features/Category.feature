@@ -1,5 +1,6 @@
 Feature: As an user, I want to choose a category and choose a product
 
+  @CATEGORY01
   Scenario: As a user I can select clothing category product page
     Given user has logged in homepage
     When user click shop button menu

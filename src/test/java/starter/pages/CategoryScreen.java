@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 
 public class CategoryScreen extends BasePageObject{
     private By shopButton(){
-        return AppiumBy.id("Shop Tab 3 of 4");
+        return AppiumBy.xpath("//android.widget.ImageView[@index='2']");
     }
     private By clothingButtonMenu(){
         return AppiumBy.xpath("//android.widget.ImageView[@index='0']");

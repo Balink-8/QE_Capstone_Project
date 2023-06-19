@@ -22,7 +22,7 @@ public class LoginScreen extends BasePageObject{
         return AppiumBy.xpath("//android.widget.ScrollView[@index='0']");
     }
     private By snackBarError(){
-        return AppiumBy.xpath("//android.view.View[@content-desc=\"Email/Password salah\"]");
+        return AppiumBy.xpath("//android.view.View[@index='1']");
     }
 
     @Step
