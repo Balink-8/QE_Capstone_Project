@@ -21,7 +21,7 @@ public class LoginScreen extends BasePageObject{
     private By homePage(){
         return AppiumBy.xpath("//android.widget.ScrollView[@index='0']");
     }
-    private By snackbarError() {
+    private By snackBarError(){
         return AppiumBy.xpath("//android.view.View[@content-desc=\"Email/Password salah\"]");
     }
 
@@ -49,6 +49,6 @@ public class LoginScreen extends BasePageObject{
     }
     @Step
     public boolean getErrorMessage() {
-        return waitUntilVisible(snackbarError()).isDisplayed();
+        return (waitUntilVisible(snackBarError()).isDisplayed());
     }
 }

@@ -46,8 +46,8 @@ public class LoginSteps {
         loginScreen.inputPassword(password);
     }
 
-    @Then("User see error message")
-    public void userSeeErrorMessage(String message) {
+    @Then("User see the error message")
+    public void userSeeTheErrorMessage(String message) {
         Assert.assertTrue(loginScreen.getErrorMessage());
     }
 }

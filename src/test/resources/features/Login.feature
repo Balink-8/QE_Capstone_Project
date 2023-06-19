@@ -14,4 +14,4 @@ Feature: As a user, I have successfully logged in so I can see the home screen.
     When User input invalid email "salahemail" on email field
     And User input invalid password"diny1234" on password field
     And User click Login button
-    Then User see error message
+    Then User see the error message
