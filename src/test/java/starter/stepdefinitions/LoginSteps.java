@@ -18,12 +18,12 @@ public class LoginSteps {
 
     @When("Admin input valid username in the username field")
     public void adminInputValidUsernameInTheUsernameField() {
-        login.inputEmail("ekaameliaputri17@gmail.com");
+        login.inputEmail("BalinkBarong@gmail.com");
     }
 
     @And("Admin input a valid password in the password field")
     public void adminInputAValidPasswordInThePasswordField() {
-        login.inputPassword("eka1234");
+        login.inputPassword("123456");
     }
 
     @And("Admin click Login button")
