@@ -23,7 +23,7 @@ public class AndroidDriverPool {
 //        caps.setCapability(MobileCapabilityType.NO_RESET, false);
         caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + File.separator + "app/app-release.apk");
 //        caps.setCapability(String.valueOf(Setting.WAIT_FOR_IDLE_TIMEOUT), 100);
-        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13.0");
+        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
 
         try {
             driver = new AndroidDriver(new URL(appiumUrl), caps);
