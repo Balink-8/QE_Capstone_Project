@@ -1,6 +1,6 @@
 Feature: As an user, I want to checkout a product and choose a payment method
 
-  @
+  @CHECKOUT01
   Scenario: As a user I can see the product page checkout using an bank central asia transfer
     Given user has logged in homepage
     When user click shop button menu
@@ -13,6 +13,7 @@ Feature: As an user, I want to checkout a product and choose a payment method
     And user select payment method transfer bank central asia
     Then user see at the payment code page
 
+  @CHECKOUT02
   Scenario: As a user I can see the product page checkout using an bank mandiri transfer
     Given user has logged in homepage
     When user click shop button menu
