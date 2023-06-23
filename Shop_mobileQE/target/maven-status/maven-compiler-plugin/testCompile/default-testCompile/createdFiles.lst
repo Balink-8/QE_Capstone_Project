@@ -1,5 +1,0 @@
-starter\CucumberTestSuite.class
-starter\pageobject\BasePageObject.class
-starter\screen\ShopPilihKategoriPage.class
-starter\stepdefinitions\ShopPilihKategoriSteps.class
-starter\hooks\BaseDriverHooks.class
