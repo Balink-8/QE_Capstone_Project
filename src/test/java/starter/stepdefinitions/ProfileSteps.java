@@ -18,8 +18,8 @@ public class ProfileSteps {
     @Given("admin has logged in Dashboard page")
     public void adminHasLoggedinDashboardPage() {
         login.onLoginPage();
-        login.inputEmail("ekaameliaputri17@gmail.com");
-        login.inputPassword("ekaa123");
+        login.inputEmail("BalinkBarong@gmail.com");
+        login.inputPassword("123456");
         login.clickLoginButton();
     }
 

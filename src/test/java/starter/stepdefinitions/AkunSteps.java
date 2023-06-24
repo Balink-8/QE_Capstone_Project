@@ -19,8 +19,8 @@ public class AkunSteps {
     public void adminOnDetailDashboardPage() {
 
         login.onLoginPage();
-        login.inputEmail("ekaameliaputri17@gmail.com");
-        login.inputPassword("ekaa123");
+        login.inputEmail("BalinkBarong@gmail.com");
+        login.inputPassword("123456");
         login.clickLoginButton();
     }
 

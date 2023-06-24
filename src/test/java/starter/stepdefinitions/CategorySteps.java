@@ -17,8 +17,8 @@ public class CategorySteps {
     @Given("admin has logged in dashboard Page")
     public void adminHasLoggedInDashboardPage() {
         login.onLoginPage();
-        login.inputEmail("ekaameliaputri17@gmail.com");
-        login.inputPassword("ekaa123");
+        login.inputEmail("BalinkBarong@gmail.com");
+        login.inputPassword("123456");
         login.clickLoginButton();
     }
 
@@ -44,7 +44,7 @@ public class CategorySteps {
 
     @And("admin input category description valid on the category description field")
     public void adminInputCategoryDescriptionValidOnTheCategoryDescriptionField() {
-        category.inputCategoryDescription("Tersedia size 27, 28, 29 dan 30, Tersedia warna hitam, coklat dan abu-abu");
+        category.inputCategoryDescription("Tersedia size 27, 28, 29 dan 30");
     }
 
     @And("admin click simpan button")

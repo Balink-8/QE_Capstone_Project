@@ -16,14 +16,14 @@ public class LoginSteps {
         login.onLoginPage();
     }
 
-    @When("Admin input valid username in the username field")
-    public void adminInputValidUsernameInTheUsernameField() {
-        login.inputEmail("ekaameliaputri17@gmail.com");
+    @When("Admin input valid email in the email field")
+    public void adminInputValidEmailInTheemailField() {
+        login.inputEmail("BalinkBarong@gmail.com");
     }
 
     @And("Admin input a valid password in the password field")
     public void adminInputAValidPasswordInThePasswordField() {
-        login.inputPassword("eka1234");
+        login.inputPassword("123456");
     }
 
     @And("Admin click Login button")
@@ -36,14 +36,14 @@ public class LoginSteps {
         System.out.println("Admin succes login");
     }
 
-    @When("Admin input invalid username")
-    public void adminInputInvalidUsername() {
-        login.inputEmail("ekaamelia");
+    @When("Admin input invalid email")
+    public void adminInputInvalidEmail() {
+        login.inputEmail("BalinkBarong@gmail.com");
     }
 
     @And("Admin input valid password")
     public void adminInputValidPassword() {
-        login.inputPassword("ekaa1234");
+        login.inputPassword("01234");
     }
 
     @Then("Admin see error message {string}")
