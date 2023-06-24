@@ -59,13 +59,13 @@ public class EventSteps {
 
     //========@TCEVENT03========
     @And("admin set the PUT api endpoint event")
-    public void adminSetTheGETApiEndpointEventToEdit() {
-        event.adminSetTheGETApiEndpointEventToEdit();
+    public void adminSetThePUTApEndpointEvent() {
+        event.adminSetThePUTApEndpointEvent();
     }
 
     @And("admin sent HTTP PUT request get event by ID")
-    public void adminSentHTTPGETRequestGetEventByID() {
-        event.adminSentHTTPGETRequestGetEventByID();
+    public void adminSentHTTPPUTRequestGetEventByID() {
+        event.adminSentHTTPPUTRequestGetEventByID();
     }
 
     @And("admin receive valid data for event by ID")

@@ -18,7 +18,7 @@ Feature: As Admin, I want to manage the event feature
     Then admin receive a valid login and promo HTTP response code 200
 #    And admin receive valid data for all promo
 
-  @TCEVENT03
+  @TCPROMO03
   Scenario: As admin, I can edit promo data by ID
     Given admin set up api endpoint login in promo
     When admin send a HTTP request login in promo
@@ -27,7 +27,7 @@ Feature: As Admin, I want to manage the event feature
     Then admin receive a valid login and promo HTTP response code 200
 #    And admin receive valid data for promo by ID
 
-  @TCEVENT04
+  @TCPROMO04
   Scenario: As admin, I can delete event data by ID
     Given admin set up api endpoint login in promo
     When admin send a HTTP request login in promo

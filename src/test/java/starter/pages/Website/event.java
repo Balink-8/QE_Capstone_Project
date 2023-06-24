@@ -77,11 +77,11 @@ public class event {
 
     //========@TCEVENT03========
     @Step("admin set the PUT api endpoint event")
-    public String adminSetTheGETApiEndpointEventToEdit(){
+    public String adminSetThePUTApEndpointEvent(){
         return url + "event/70";
     }
     @Step("admin sent HTTP PUT request post event")
-    public void adminSentHTTPGETRequestGetEventByID(){
+    public void adminSentHTTPPUTRequestGetEventByID(){
         String body = "{\n" +
                 "    \"artikel_id\": \"1\",\n" +
                 "        \"gambar\": \"123\",\n" +
@@ -97,7 +97,7 @@ public class event {
                 "        \"link_lokasi\": \"123\"\n" +
                 "}";
         JSONObject reqBody = new JSONObject(body);
-        SerenityRest.given().header("Content-Type", "application/json").body("[\n" + reqBody.toString() + "\n]").put(adminSetTheGETApiEndpointEventToEdit());
+        SerenityRest.given().header("Content-Type", "application/json").body("[\n" + reqBody.toString() + "\n]").put(adminSetThePUTApEndpointEvent());
     }
     @Step("admin receive valid data for event by ID")
     public void adminReceiveValidDataForEventByID(){
@@ -107,7 +107,7 @@ public class event {
     //========@TCEVENT04========
     @Step("admin set the DEL api endpoint event")
     public String adminSetTheDELApiEndpointEvent(){
-        return url + "event?pagevent/67";
+        return url + "event/70";
     }
 
     @Step("admin sent HTTP DEL request event by ID")
