@@ -17,7 +17,6 @@ public class Login extends PageObject {
         $(buttonLogin()).shouldBeVisible();
     }
 
-
     @Step
     public void inputEmail(String email){
         $(emailField()).type(email);

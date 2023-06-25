@@ -16,16 +16,16 @@ public class Category extends PageObject {
         return By.xpath("//label[text()='Nama Kategori']/following-sibling::div/input");
     }
     private By descriptionCategoryField(){
-        return By.id("deskripsiKategori");
+        return By.xpath("//textarea[@name=\"deskripsi\"]");
     }
     private By simpanButton() {
         return By.xpath("//p[text()='Simpan']");
     }
     private By editButton(){
-        return By.id("edit-icon");
+        return By.id("edit-button");
     }
     private By deleteButtton(){
-        return By.id("delete-icon");
+        return By.id("delete-button");
     }
     @Step
     public void clickMenuCategory(){
@@ -52,14 +52,14 @@ public class Category extends PageObject {
     @Step
     public void clickEditButton(){
         Actions builder = new Actions(getDriver());
-        Actions hoverOverLocationSelector = builder.moveToElement(getDriver().findElement(By.id("edit-icon")));
+        Actions hoverOverLocationSelector = builder.moveToElement(getDriver().findElement(By.id("edit-button")));
         hoverOverLocationSelector.perform();
         $(editButton()).click();
     }
     @Step
     public void clickDeleteButton(){
         Actions builder = new Actions(getDriver());
-        Actions hoverOverLocationSelector = builder.moveToElement(getDriver().findElement(By.id("delete-icon")));
+        Actions hoverOverLocationSelector = builder.moveToElement(getDriver().findElement(By.id("delete-button")));
         hoverOverLocationSelector.perform();
         $(deleteButtton()).click();
     }

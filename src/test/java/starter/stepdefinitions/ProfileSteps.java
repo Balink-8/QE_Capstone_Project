@@ -18,8 +18,8 @@ public class ProfileSteps {
     @Given("admin has logged in Dashboard page")
     public void adminHasLoggedinDashboardPage() {
         login.onLoginPage();
-        login.inputEmail("ekaameliaputri17@gmail.com");
-        login.inputPassword("ekaa123");
+        login.inputEmail("BalinkBarong@gmail.com");
+        login.inputPassword("123456");
         login.clickLoginButton();
     }
 
@@ -86,5 +86,10 @@ public class ProfileSteps {
     @And("admin input address valid on the address field")
     public void adminInputAddressValidOnTheAddressField() {
         profile.inputAlamat("Kecamatan Kuta, Sebelah Selata Kota Denpasar, Bali");
+    }
+
+    @And("admin input bank account number valid on the Bank account number field")
+    public void adminInputBankAccountNumberValidOnTheBankAccountNumberField() {
+        profile.inputBankAccount("3456 1234 6789");
     }
 }

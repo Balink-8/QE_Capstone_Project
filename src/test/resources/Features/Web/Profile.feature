@@ -29,3 +29,12 @@ Feature: As admin, I want to update profile and view profile
     And admin input address valid on the address field
     And admin click Simpan button
     Then admin see notification Berhasil Disimpan displayed
+
+  @TCPROFILE04
+  Scenario: As an admin, I want to update company bank account number profile details
+    Given admin has logged in dashboard page
+    When admin click Profile button menu
+    And admin click Edit Profile button
+    And admin input bank account number valid on the Bank account number field
+    And admin click Simpan button
+    Then admin see notification Berhasil Disimpan displayed

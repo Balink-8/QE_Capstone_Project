@@ -18,8 +18,8 @@ public class TransactionSteps {
     @Given("admin has logged in dashboard page")
     public void adminHasLoggedInDashboardPage() {
         login.onLoginPage();
-        login.inputEmail("ekaameliaputri17@gmail.com");
-        login.inputPassword("ekaa123");
+        login.inputEmail("BalinkBarong@gmail.com");
+        login.inputPassword("123456");
         login.clickLoginButton();
     }
 

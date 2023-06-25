@@ -36,14 +36,14 @@ public class LoginSteps {
         System.out.println("Admin succes login");
     }
 
-    @When("Admin input invalid username")
-    public void adminInputInvalidUsername() {
-        login.inputEmail("ekaamelia");
+    @When("Admin input invalid email")
+    public void adminInputInvalidEmail() {
+        login.inputEmail("BalinkBarong@gmail.com");
     }
 
     @And("Admin input valid password")
     public void adminInputValidPassword() {
-        login.inputPassword("ekaa1234");
+        login.inputPassword("01234");
     }
 
     @Then("Admin see error message {string}")
