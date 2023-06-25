@@ -16,13 +16,13 @@ public class EventSteps {
     Event event;
 
     //======TCEVENT01==========
-    @Given("admin on the dashboard page")
-    public void adminOnTheDashboardPage() {
+    @Given("admin on the dashboard page in event")
+    public void adminOnTheDashboardPageEventEvent() {
         login.onLoginPage();
-        login.inputEmail("ekaameliaputri17@gmail.com");
-        login.inputPassword("ekaa123");
+        login.inputEmail("BalinkBarong@gmail.com");
+        login.inputPassword("123456");
         login.clickLoginButton();
-        event.adminOnTheDashboardPage();
+        event.adminOnTheDashboardPageEvent();
     }
 
     @When("admin clicks on the event menu")
@@ -83,9 +83,24 @@ public class EventSteps {
         event.adminFillsInTheGoogleMapsLink("https://goo.gl/maps/WcUWffZ9hK4CmJEu5");
     }
 
-    @And("admin fill in time")
-    public void adminFillInTime() {
-        event.adminFillInTime("16.00 WITA");
+    @And("admin fills in the start date")
+    public void adminFillsInTheStartDate() {
+        event.adminFillsInTheStartDate("17 September 2023");
+    }
+
+    @And("admin fills in the finish date")
+    public void adminFillsInTheFinishDate() {
+        event.adminFillsInTheFinishDate("18 September 2023");
+    }
+
+    @And("admin fills time start")
+    public void adminFillsTimeStart() {
+        event.adminFillsTimeStart("16.00");
+    }
+
+    @And("admin fills time finish")
+    public void adminFillsTimeFinish() {
+        event.adminFillsTimeFinish("16,00");
     }
 
     @And("admin click paid ticket mode")
@@ -103,7 +118,7 @@ public class EventSteps {
         event.adminFillsInTheAmount("1");
     }
 
-    @And("admin click the save button")
+    @And("admin click the save button event")
     public void adminClickTheSaveButton() {
         event.adminClickTheSaveButton();
     }
@@ -149,9 +164,10 @@ public class EventSteps {
         event.adminClickDeleteOnTheEventDataThatYouWantToDelete();
     }
 
-//    @And("click yes in the warning")
-//    public void clickYesInTheWarning() {
-//    }
+    @And("click yes in the warning")
+    public void clickYesInTheWarning() {
+        event.warning();
+    }
 //
 //    @Then("admin successfully deletes the event data")
 //    public void adminSuccessfullyDeletesTheEventData() {
@@ -160,5 +176,6 @@ public class EventSteps {
     //======TCEVENT07==========
     @Then("admin stays on the add event page")
     public void adminStaysOnTheAddEventPage() {
+        event.adminStaysOnTheAddEventPage();
     }
 }

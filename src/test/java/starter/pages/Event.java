@@ -11,28 +11,30 @@ public class Event extends PageObject {
     private By eventMenu(){return By.id("event");}
     private By eventPage(){return By.id("navbarBrand");}
     private By addEventBtn(){return By.id("tambahEvent");}
-    private By titleEvent(){return By.id("judulEvent");}
-    private By descriptionEvent(){return By.id("deskripsiEvent");}
-    private By locationEvent(){return By.id("lokasiEvent");}
-    private By googleMaps(){return By.id("linkGoogleEvent");}
-    private By time(){return By.id("waktuEvent");}
+    private By titleEvent(){return By.id("nama");}
+    private By descriptionEvent(){return By.id("deskripsi");}
+    private By locationEvent(){return By.id("lokasi");}
+    private By googleMaps(){return By.id("link_lokasi");}
     private By ticketMode(){return By.xpath("//button[@class='ant-switch css-12jzuas']");}
-    private By price(){return By.id("hargaEvent");}
-    private By amount(){return By.id("jumlahEvent");}
+    private By price(){return By.id("harga_tiket");}
+    private By amount(){return By.id("stok_tiket");}
     private By save(){return By.xpath("//p[text()='Simpan']");}
     private By oneDataEditEvent(){return By.id("edit-icon");}
-    private By changeTitle(){return By.id("judulEvent");}
+    private By changeTitle(){return By.id("nama");}
     private By deleteBtn(){return By.id("delete-icon");}
-    private By oneDataEvent(){return By.xpath("//td[text()='Tari Kecak']");}
+    private By oneDataEvent(){return By.xpath("//td[text()='bali banget']");}
     private By detailPage(){return By.xpath("//h1[text()='Detail Event']");}
     private By errorMsg(){return By.xpath("//h1[text()='Buat event baru']");}
     private By manageAddEvent(){return By.xpath("//a[text()='Event']");}
-
-
+    private By startDate(){return By.id("tanggal_mulai");}
+    private By startFinish(){return By.id("tanggal_selesai");}
+    private By timeStart(){return By.id("waktu_mulai");}
+    private By timeFinish(){return By.id("waktu_selesai");}
+    private By yes(){return By.id("modalKonfirmasiCancelButton");}
 
     //======TCEVENT01==========
     @Step
-    public void adminOnTheDashboardPage() {
+    public void adminOnTheDashboardPageEvent() {
         $(dasboardPage()).shouldBeVisible();
     }
     public void AdminClicksOnTheEventMenu(){
@@ -54,7 +56,7 @@ public class Event extends PageObject {
     @Step
     public void adminClickTheSelectPhotoButton(){
 
-        WebElement fileInput = getDriver().findElement(By.id("fotoEvent"));
+        WebElement fileInput = getDriver().findElement(By.id("pilihFotoButton"));
         fileInput.sendKeys("C:\\Users\\Lenovo\\Downloads\\gambar.webp");
 
     }
@@ -75,8 +77,20 @@ public class Event extends PageObject {
         $(googleMaps()).type(link);
     }
     @Step
-    public void adminFillInTime(String time){
-        $(time()).type(time);
+    public void adminFillsInTheStartDate(String StartDate){
+        $(startDate()).type(StartDate);
+    }
+    @Step
+    public void adminFillsInTheFinishDate(String StartFinish){
+        $(startFinish()).type(StartFinish);
+    }
+    @Step
+    public void adminFillsTimeStart(String TimeStart){
+        $(timeStart()).type(TimeStart);
+    }
+    @Step
+    public void adminFillsTimeFinish(String TimeFinish){
+        $(timeFinish()).type(TimeFinish);
     }
     public void adminClickPaidTicketMode(){
         $(ticketMode()).click();
@@ -128,6 +142,10 @@ public class Event extends PageObject {
         Actions hoverOverLocationSelector = builder.moveToElement(getDriver().findElement(By.id("delete-icon")));
         hoverOverLocationSelector.perform();
         $(deleteBtn()).click();
+    }
+    @Step
+    public void warning(){
+        $(yes()).click();
     }
 
     //======TCEVENT07==========
