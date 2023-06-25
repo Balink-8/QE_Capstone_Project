@@ -33,6 +33,10 @@ public class artikelSteps {
     public void adminReceiveAValidLoginAndArtikelHTTPResponseCode(int arg0) {
         artikel.adminReceiveAValidLoginAndArtikelHTTPResponseCode200();
     }
+    @And("admin receives valid data to add Artikel data")
+    public void adminReceivesValidDataToAddArtikelData() {
+        artikel.adminReceivesValidDataToAddArtikelData();
+    }
 
     @And("admin set the GET api endpoint artikel")
     public void adminSetTheGETApiEndpointArtikel() {
@@ -42,6 +46,10 @@ public class artikelSteps {
     @And("admin sent HTTP GET request get artikel by ID")
     public void adminSentHTTPGETRequestGetArtikelByID() {
         artikel.adminSentHTTPGETRequestGetArtikelByID();
+    }
+    @And("admin receive valid data for all artikel")
+    public void adminReceiveValidDataForAllArtikel() {
+        artikel.adminReceiveValidDataForAllArtikel();
     }
 
     @And("admin set the PUT api endpoint artikel")
@@ -53,6 +61,10 @@ public class artikelSteps {
     public void adminSentHTTPPUTRequestArtikelByID() {
         artikel.adminSentHTTPPUTRequestArtikelByID();
     }
+    @And("admin receive valid data for Artikel by ID")
+    public void adminReceiveValidDataForArtikelByID() {
+        artikel.adminReceiveValidDataForArtikelByID();
+    }
 
     @And("admin set the DELETE api endpoint artikel")
     public void adminSetTheDELETEApiEndpointArtikel() {
@@ -62,5 +74,9 @@ public class artikelSteps {
     @And("admin sent HTTP DELETE request artikel by ID")
     public void adminSentHTTPDELETERequestArtikelByID() {
         artikel.adminSentHTTPDELETERequestArtikelByID();
+    }
+    @And("admin receive valid data for delete artikel by ID")
+    public void adminReceiveValidDataForDeleteartikelByID() {
+        artikel.adminReceiveValidDataForDeleteArtikelByID();
     }
 }
