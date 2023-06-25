@@ -1,7 +1,6 @@
-@UpdateProduct
 Feature: As a user i want to success update product
 
-  @updateProductWithValidEndpoint
+  @TCPRODUCT09
   Scenario: as user i want to input valid endpoint for update product
     Given user have endpoint auth for update product
     When user send request endpoint auth for update product
@@ -10,7 +9,7 @@ Feature: As a user i want to success update product
     And product success to update product with status code 200
     Then user validate data update product
 
-  @updateProductWithInvalidEndpoint
+  @TCPRODUCT10
   Scenario: as user i want to input invalid endpoint so that i cannot update product
     Given user have endpoint auth for update product
     When user send request endpoint auth for update product

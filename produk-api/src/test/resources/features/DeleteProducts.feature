@@ -1,7 +1,6 @@
-@DeleteProduct
 Feature: As a user i want to delete product
 
-  @DeleteProductWithValidEndpoint
+  @TCPRODUCT07
   Scenario: as user i want to input valid endpoint for delete product
     Given user have endpoint auth for delete product
     When user send request endpoint auth for delete product
@@ -10,7 +9,7 @@ Feature: As a user i want to delete product
     And product success to delete product with status code 200
     Then user validate data delete product
 
-  @DeleteProductWithInvalidEndpoint
+  @TCPRODUCT08
   Scenario: as user i want to input invalid endpoint for delete product
     Given user have endpoint auth for delete product
     When user send request endpoint auth for delete product
