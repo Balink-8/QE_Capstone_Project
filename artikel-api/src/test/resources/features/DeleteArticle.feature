@@ -1,7 +1,6 @@
-@DeleteArticle
 Feature: As a user i want to delete Article
 
-  @DeleteArticleWithValidEndpoint
+  @TCARTICEL09
   Scenario: as user i want to input valid endpoint for delete Article
     Given user have endpoint auth for delete Article
     When user send request endpoint auth for delete Article
@@ -10,7 +9,7 @@ Feature: As a user i want to delete Article
     And Article success to delete Article with status code 200
     Then user validate data delete Article
 
-  @DeleteArticleWithInvalidEndpoint
+  @TCARTICEL10
   Scenario: as user i want to input invalid endpoint for delete Article
     Given user have endpoint auth for delete Article
     When user send request endpoint auth for delete Article

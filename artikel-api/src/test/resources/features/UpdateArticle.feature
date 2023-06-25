@@ -1,7 +1,6 @@
-@UpdateArticle
 Feature: As a user i want to success update Article
 
-  @updateArticleWithValidEndpoint
+  @TCARTICLE03
   Scenario: as user i want to input valid endpoint for update Article
     Given user have endpoint auth for update Article
     When user send request endpoint auth for update Article
@@ -10,7 +9,7 @@ Feature: As a user i want to success update Article
     And Article success to updated with status code 200
     Then user validate data update Article
 
-  @updateArticleWithInvalidEndpoint
+  @TCARTICLE04
   Scenario: as user i want to input invalid endpoint so that i cannot update Article
     Given user have endpoint auth for update Article
     When user send request endpoint auth for update Article

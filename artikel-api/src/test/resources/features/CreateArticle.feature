@@ -1,7 +1,6 @@
-@CreateAticle
 Feature: As a user i want to success create a new article
 
-  @CreateANewArticleWithValidEndpoint
+  @TCARTICEL01
   Scenario: as user i want to input valid endpoint for create a new article
     Given user have endpoint auth for create a new article
     When user send request endpoint auth for create a new article
@@ -10,7 +9,7 @@ Feature: As a user i want to success create a new article
     And article success to created with status code 200
     Then user validate data new article
 
-  @CreateANewArticleWithInvalidEndpoint
+  @TCARTICEL02
   Scenario: as user i want to input invalid endpoint for create a new article
     Given user have endpoint auth for create a new article
     When user send request endpoint auth for create a new article
