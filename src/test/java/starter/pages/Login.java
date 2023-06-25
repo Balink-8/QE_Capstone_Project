@@ -37,4 +37,7 @@ public class Login extends PageObject {
     public void clickLoginButton(){
         $(buttonLogin()).click();
     }
+
+    public void onLoginSteps() {
+    }
 }
