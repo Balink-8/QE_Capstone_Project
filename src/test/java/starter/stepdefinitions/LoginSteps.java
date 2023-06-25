@@ -16,8 +16,8 @@ public class LoginSteps {
         login.onLoginPage();
     }
 
-    @When("Admin input valid email in the email field")
-    public void adminInputValidEmailInTheemailField() {
+    @When("Admin input valid username in the username field")
+    public void adminInputValidUsernameInTheUsernameField() {
         login.inputEmail("BalinkBarong@gmail.com");
     }
 
