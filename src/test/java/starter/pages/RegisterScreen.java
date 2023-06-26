@@ -4,7 +4,6 @@ import io.appium.java_client.AppiumBy;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.Actions;
 
 public class RegisterScreen extends BasePageObject{
     private By loginPage(){
@@ -23,10 +22,10 @@ public class RegisterScreen extends BasePageObject{
         return AppiumBy.xpath("//android.widget.EditText[@index='6']");
     }
     private By passwordField(){
-        return AppiumBy.xpath("//android.widget.EditText[@index='8']");
+        return AppiumBy.xpath("//android.view.View[@content-desc=\"Password\"]/following-sibling::android.widget.EditText");
     }
     private By confirmPasswordField(){
-        return AppiumBy.xpath("//android.widget.EditText[@index='10']");
+        return AppiumBy.xpath("//android.view.View[@content-desc=\"Confirm Password\"]/following-sibling::android.widget.EditText");
     }
     private By registerButton(){
         return AppiumBy.xpath("(//android.view.View[@content-desc=\"REGISTER\"])[2]\n");
@@ -58,11 +57,13 @@ public class RegisterScreen extends BasePageObject{
     public void inputPasswordField(String password){
         onClick(passwordField());
         onType(passwordField(), password);
+        driver.getAndroidDriver().hideKeyboard();
     }
     @Step
     public void inputConfirmPasswordField(String confirmPassword){
         onClick(confirmPasswordField());
         onType(confirmPasswordField(), confirmPassword);
+        driver.getAndroidDriver().hideKeyboard();
     }
     @Step
     public void clickRegisterButton(){

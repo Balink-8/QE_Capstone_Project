@@ -54,4 +54,29 @@ public class RegisterSteps {
     public void userOnLoginPage() {
         registerScreen.UserOnTheLoginPage();
     }
+
+    @And("User input a invalid email in the email field")
+    public void userInputAInvalidEmailInTheEmailField() {
+        registerScreen.inputEmailField("salahemail");
+    }
+
+    @Then("User register failed and stay on register page")
+    public void userRegisterFailedAndStayOnRegisterPage() {
+        registerScreen.userOnTheRegisterPage();
+    }
+
+    @And("User input a invalid number phone in the number phone field")
+    public void userInputAInvalidNumberPhoneInTheNumberPhoneField() {
+        registerScreen.inputTelephoneNumberField("234567");
+    }
+
+    @And("User input a invalid password in the password field")
+    public void userInputAInvalidPasswordInThePasswordField() {
+        registerScreen.inputPasswordField("salah");
+    }
+
+    @And("User input a invalid confirm password in the confirm password field")
+    public void userInputAInvalidConfirmPasswordInTheConfirmPasswordField(){
+        registerScreen.inputConfirmPasswordField("salah");
+    }
 }

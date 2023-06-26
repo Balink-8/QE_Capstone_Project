@@ -41,13 +41,18 @@ public class LoginSteps {
         loginScreen.inputEmail(email);
     }
 
-    @And("User input invalid password{string} on password field")
-    public void userInputInvalidPasswordOnPasswordField(String password) {
+    @And("User input valid password{string} on password field")
+    public void userInputValidPasswordOnPasswordField(String password) {
         loginScreen.inputPassword(password);
     }
 
     @Then("User see the error message")
     public void userSeeTheErrorMessage() {
         Assert.assertTrue(loginScreen.getErrorMessage());
+    }
+
+    @And("User input invalid password{string} on password field")
+    public void userInputInvalidPasswordOnPasswordField(String password) {
+        loginScreen.inputPassword(password);
     }
 }

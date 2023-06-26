@@ -12,6 +12,14 @@ Feature: As a user, I have successfully logged in so I can see the home screen.
   Scenario: As an user I cant login because I input invalid username
     Given User on login screen
     When User input invalid email "salahemail" on email field
-    And User input invalid password"diny1234" on password field
+    And User input valid password"diny1234" on password field
+    And User click Login button
+    Then User see the error message
+
+  @TCLOGIN03
+  Scenario: As an user I cant login because I input invalid password
+    Given User on login screen
+    When User input invalid email "salahemail" on email field
+    And User input invalid password"salahpassword" on password field
     And User click Login button
     Then User see the error message
